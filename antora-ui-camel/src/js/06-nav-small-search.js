@@ -17,7 +17,7 @@
     'nav-burger': document.getElementsByClassName('navbar-burger')[0],
     'search-cancel': document.getElementById('search-cancel'),
     'search-result': document.getElementById('search_results'),
-    'search': document.getElementById('search'),
+    search: document.getElementById('search'),
     'nav-menu': document.getElementsByClassName('navbar-menu')[0],
     'nav-search': document.getElementsByClassName('navbar-search')[0],
   }
@@ -39,11 +39,12 @@
     if (states['navbar-search'] && states['navigate-searchbar']) {
       domHandles['nav-logo'].style.display = domHandles['nav-fill'].style.display = 'none'
       domHandles['nav-tools'].style.display = 'none'
-      domHandles['nav-burger'].style.display = domHandles['nav-menu'].style.display = 'none'
+      domHandles['nav-burger'].style.display = 'none'
       domHandles['search-cancel'].style.bottom = 'calc(50% - 0.05rem)'
       domHandles['search'].style.display = navigator.style.display = 'block'
       domHandles['search-result'].style.width = domHandles['search'].style.width = (0.85 * navWidth).toString() + 'px'
       if (navWidth >= 1024 && navWidth <= 1220) {
+        domHandles['nav-menu'].style.display = 'none'
         domHandles['nav-search'].style.display = 'block'
         domHandles['search-result'].style.width = domHandles['search'].style.width = (0.92 * navWidth).toString() + 'px'
       } else if (navWidth >= 565) {
