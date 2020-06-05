@@ -36,6 +36,11 @@
                 <a class="nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"></a>
                 <div id="topbar-nav" class="navbar-menu">
                     <div class="navbar-end">
+                        <div class="navbar-search results-hidden within-nav">
+                            <input id="search" class="search" placeholder="Search" autocomplete="off">
+                            <img src="/_/img/cancel.svg" alt="Clear" id="search-cancel">
+                            <div id="search_results"></div>
+                        </div>
                         {{ range .Site.Menus.main }}
                         {{ if .HasChildren }}
                         <div class="navbar-item has-dropdown is-hoverable">
@@ -70,6 +75,6 @@
                     <span></span>
                 </button>
             </div>
-            <img src= "/_/img/cancel.svg" alt="Clear" id="navigate-searchbar">            
+            <img src= "/_/img/cancel-navigate.svg" alt="Clear" id="navigate-searchbar">            
         </nav>
     </header>
