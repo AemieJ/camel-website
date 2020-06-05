@@ -428,9 +428,9 @@ body {
 
 #navigate-searchbar {
   position: relative;
-  top: -2.5rem;
+  top: -2.85rem;
   left: calc(100% - 2.5rem);
-  height: 1.5rem;
+  height: 2.5rem;
   display: none;
 }
 
@@ -528,9 +528,13 @@ body {
     display: none;
   }
 
+  .within-nav {
+    display: block;
+  }
+
   #navigate-searchbar {
-    top: 1.5rem;
-    left: -2rem;
+    top: 1rem;
+    left: -0.75rem;
   }
 }
 
