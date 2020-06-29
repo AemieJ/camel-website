@@ -1,5 +1,5 @@
 [build]
-  command = "(cd antora-ui-camel && yarn --non-interactive --frozen-lockfile install && yarn --non-interactive --frozen-lockfile build) && yarn --non-interactive --frozen-lockfile install && yarn --non-interactive --frozen-lockfile build"
+  command = "(cd antora-ui-camel && yarn build) && yarn build"
   environment = { CAMEL_ENV = "netlify" }
 
 [build.processing]
