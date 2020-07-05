@@ -1,12 +1,16 @@
 {
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
+  "workspaces": [
+    "antora-ui-camel"
+  ],
   "scripts": {
+    "build:ui": "yarn workspace antora-ui-camel build",
     "build:antora": "antora --clean --fetch antora-playbook.yml",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data}",
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
-    "build": "run-s build:antora build:hugo build:minify build:sitemap",
+    "build": "run-s build:ui build:antora build:hugo build:minify build:sitemap",
     "preview": "run-s preview:antora preview:hugo",
     "preview:antora": "antora --clean --fetch antora-playbook.yml",
     "preview:hugo": "hugo server -D",

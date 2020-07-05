@@ -8,6 +8,9 @@ disableKinds = ["taxonomyTerm"]
 enableRobotsTXT = true
 timeout = 300000
 
+[markup.goldmark.renderer]
+    unsafe= true
+
 [blackfriday]
     nofollowLinks = true
     noreferrerLinks = true
